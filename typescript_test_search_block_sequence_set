@@ -1,0 +1,18 @@
+Script started on 2025-11-19 05:24:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="129" LINES="14"]
+[?2004h[0;32m@benztranwot [0m➜ [1;34m/workspaces/Project-3-Zip-Code-Team-4 [0;36m([1;31mmain[0;36m) [0m$ g++ search_bss.cpp -o search_bss.exe
+[?2004l
+[?2004h[0;32m@benztranwot [0m➜ [1;34m/workspaces/Project-3-Zip-Code-Team-4 [0;36m([1;31mmain[0;36m) [0m$ ./search_bss.exe -buildIndex -D block_sequence_set_data.txt -I simp 
+le_index.txt -Z56301 -Z99999
+[?2004l
+Building index from data file 'block_sequence_set_data.txt'...
+Index written to 'simple_index.txt' (40933 entries).
+Searching for ZIP 56301...
+  Found in block RBN 23644:
+  Record: 56301,Saint Cloud,MN,Stearns,45.541000,-94.181900
+Searching for ZIP 99999...
+  Not found (ZIP is larger than any highestKey in index).
+[?2004h[0;32m@benztranwot [0m➜ [1;34m/workspaces/Project-3-Zip-Code-Team-4 [0;36m([1;31mmain[0;36m) [0m$ exit
+[?2004l
+exit
+
+Script done on 2025-11-19 05:25:54+00:00 [COMMAND_EXIT_CODE="0"]
