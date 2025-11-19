@@ -1,11 +1,11 @@
 #include "BlockPostalCode.h"
 #include "HeaderRecordPostalCodeItem.h"
 
-BlockPostalCode::BlockPostalCode() : prev(nullptr), next(nullptr) {}
+BlockPostalCode::BlockPostalCode() : prevRBN(nullptr), nextRBN(nullptr) {}
 
-BlockPostalCode::BlockPostalCode(const HeaderRecordPostalCodeItem &item) : data(item), prev(nullptr), next(nullptr) {}
+BlockPostalCode::BlockPostalCode(const HeaderRecordPostalCodeItem &item) : data(item), prevRBN(nullptr), nextRBN(nullptr) {}
 
-BlockPostalCode::BlockPostalCode(const HeaderRecordPostalCodeItem &item, BlockPostalCode *prevBlock, BlockPostalCode *nextBlock) : data(item), prev(prevBlock), next(nextBlock) {}
+BlockPostalCode::BlockPostalCode(const HeaderRecordPostalCodeItem &item, BlockPostalCode *prevBlock, BlockPostalCode *nextBlock) : data(item), prevRBN(prevBlock), nextRBN(nextBlock) {}
 
 void BlockPostalCode::setBlockItem(const HeaderRecordPostalCodeItem &item)
 {
@@ -14,12 +14,12 @@ void BlockPostalCode::setBlockItem(const HeaderRecordPostalCodeItem &item)
 
 void BlockPostalCode::setPrev(BlockPostalCode *prevBlock)
 {
-    prev = prevBlock;
+    prevRBN = prevBlock;
 }
 
 void BlockPostalCode::setNext(BlockPostalCode *nextBlock)
 {
-    next = nextBlock;
+    nextRBN = nextBlock;
 }
 
 HeaderRecordPostalCodeItem BlockPostalCode::getBlockItem() const
@@ -29,10 +29,10 @@ HeaderRecordPostalCodeItem BlockPostalCode::getBlockItem() const
 
 BlockPostalCode *BlockPostalCode::getPrev() const
 {
-    return prev;
+    return prevRBN;
 }
 
 BlockPostalCode *BlockPostalCode::getNext() const
 {
-    return next;
+    return nextRBN;
 }

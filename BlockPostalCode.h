@@ -7,8 +7,8 @@ class BlockPostalCode
 {
 private:
     HeaderRecordPostalCodeItem data;
-    BlockPostalCode *prev;
-    BlockPostalCode *next;
+    BlockPostalCode *prevRBN;
+    BlockPostalCode *nextRBN;
 
 public:
     BlockPostalCode();
@@ -16,8 +16,8 @@ public:
     BlockPostalCode(const HeaderRecordPostalCodeItem &item, BlockPostalCode *prevBlock, BlockPostalCode *nextBlock);
 
     void setBlockItem(const HeaderRecordPostalCodeItem &item);
-    void setPrev(BlockPostalCode *prevBlock);
-    void setNext(BlockPostalCode *nextBlock);
+    void setPrevRBN(BlockPostalCode *prevBlock);
+    void setNextRBN(BlockPostalCode *nextBlock);
 
     HeaderRecordPostalCodeItem getBlockItem() const;
     BlockPostalCode *getPrev() const;

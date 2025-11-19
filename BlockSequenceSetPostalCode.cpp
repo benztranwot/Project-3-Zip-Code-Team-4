@@ -50,13 +50,13 @@ bool BlockSequenceSetPostalCode::add(const HeaderRecordPostalCodeItem &newHeader
     else if (headBlock == tailBlock)
     {
         tailBlock = newBlock;
-        headBlock->setNext(tailBlock);
-        tailBlock->setPrev(headBlock);
+        headBlock->setNextRBN(tailBlock);
+        tailBlock->setPrevRBN(headBlock);
     }
     else
     {
-        newBlock->setPrev(tailBlock);
-        tailBlock->setNext(newBlock);
+        newBlock->setPrevRBN(tailBlock);
+        tailBlock->setNextRBN(newBlock);
         tailBlock = newBlock;
     }
 
